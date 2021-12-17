@@ -1,0 +1,112 @@
+* {
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.padre {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+/* CABECERA */
+    .header {
+        background:#000;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+        .menu {
+            background: #2D4059;
+            display: flex;
+            flex-flow: row nowrap;
+            height: 100px;
+            align-items: center;
+        }
+            .logo{
+                background: #ea5455;
+                flex: 1 1 auto;
+                height: 30px;
+            }
+            .nav {
+                background: #ea5455;
+                flex: 5 1 auto;
+                height: 30px;
+            }
+            .social {
+                background: #ea5455;
+                flex: 1 1 auto;
+                height: 30px;
+            }
+        .texto-principal{
+            background: #f07b3f;
+        }
+            h1 {
+                background: #ffd460;
+                height: 25px;
+            }
+
+/* ARTICULO */             
+    .section {
+        background: #000;
+        display: flex;
+    }
+        .articulos {
+            background: #4e4e6a;
+            flex: 2 1 auto;
+            display: flex;
+            flex-flow: row wrap;
+        }
+            .article{
+                background: #1f6cb0;
+                flex: 1 1 40%;
+                height: 100px;
+            }
+            .navegacion {
+                background: #70a3c4;
+                flex: 1 1 100%;
+            }
+        .aside {
+            background: #f73f52;
+            flex: 1 1 auto;
+        }
+            .publicidad {
+                background: #ffea85;
+                height: 80px;
+                margin-bottom: 25px;
+            }
+/* FOOTER */                
+    .footer {
+        background: #000;
+        display: flex;
+        justify-content: center;
+    }
+        .pie {
+            background: #e6af2e;
+            width: 300px;
+        }
+/* RESPONSIVE */
+@media all and (max-width: 800px) {
+    .section {
+        flex-direction: column;
+    }
+    .menu {
+        flex-direction: column;
+        height: auto;
+    }
+    .aside {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .articulos {
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 400px) {
+    .aside {
+        flex-direction: column;
+    }
+}
